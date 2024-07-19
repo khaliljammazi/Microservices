@@ -1,0 +1,11 @@
+FROM eclipse-temurin:17-jdk-alpine
+
+WORKDIR /ms-examen
+
+EXPOSE 8087
+
+ADD target/*.jar ms-examen-0.0.1-SNAPSHOT.jar
+
+ENTRYPOINT ["java", "-jar", "ms-examen-0.0.1-SNAPSHOT.jar"]
+
+
